@@ -1,0 +1,23 @@
+body{
+    padding:20px;
+}
+ul{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    width: 150px;
+}
+
+input:valid{
+    background-color: rgba(0, 128, 0, 0.5);
+}

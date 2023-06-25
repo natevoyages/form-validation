@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- need Email, country, Zip Code, 
+  password and password Confirmation-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./javascript.js"></script>
+</head>
+<body>
+  <form id="form" autocomplete="on">
+    <ul>
+      <li>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+      </li>
+      <li>
+        <label for="country">Country</label>
+        <input type="text" name="country" id="country" required>
+      </li>
+      <li>
+        <label for="zip">Zip Code</label>
+        <input type="text" name="zip" id="zip" required>
+      </li>
+      <li>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+      </li>
+      <li>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" name="confirm-password" id="confirm-password" required>
+      </li>
+      <li>
+        <button type="submit">Submit</button>
+      </li>
+    </ul>
+  </form>
+    
+</body>
+</html>
