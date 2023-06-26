@@ -21,3 +21,13 @@ button{
 input:valid{
     background-color: rgba(0, 128, 0, 0.5);
 }
+
+
+.error{
+    background-color: red;
+    color: white;
+}
+
+.error.active{
+    padding: 0.3em;
+}

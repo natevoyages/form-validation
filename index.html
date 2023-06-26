@@ -7,33 +7,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Validation</title>
   <link rel="stylesheet" href="./style.css">
-  <script src="./javascript.js"></script>
+  <script src="./javascript.js" defer></script>
 </head>
 <body>
-  <form id="form" autocomplete="on">
+  <form id="form" autocomplete="on" novalidate>
     <ul>
       <li>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required>
+        <span class="error" aria-live="polite"></span>
       </li>
       <li>
         <label for="country">Country</label>
-        <input type="text" name="country" id="country" required>
+        <select type="text" name="country" id="country" required>
+          <option value="" disabled selected>Select Your Country</option>
+          <option value="USA">United States</option>
+          <option value="UK">United Kingdom</option>
+          <option value="MX">Mexico</option>
+          <option value="CA">Canada</option>
+        </select>
+        <span class="error" aria-live="polite"></span>
       </li>
       <li>
         <label for="zip">Zip Code</label>
-        <input type="text" name="zip" id="zip" required>
+        <input type="text" name="zip" id="zip" minlength="5" maxlength="5" inputmode="numeric" pattern = "\d{5}" required>
+        <span class="error" aria-live="polite"></span>
       </li>
       <li>
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
+        <input type="password" name="password" id="password"  minlength="8" maxlength="18" pattern = "\w{8,18}" required>
+        <span class="error" aria-live="polite"></span>
       </li>
       <li>
         <label for="confirm-password">Confirm Password</label>
-        <input type="password" name="confirm-password" id="confirm-password" required>
+        <input type="password" name="confirm-password" id="confirm-password" minlength="8" maxlength="18"  pattern="\w{8,18}" required>
+        <span class="error" aria-live="polite"></span>
       </li>
       <li>
-        <button type="submit">Submit</button>
+        <button id="submit" type="submit">Submit</button>
       </li>
     </ul>
   </form>
